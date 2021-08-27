@@ -3,7 +3,7 @@
 // document.body.innerHTML = `<h1>Hello ${personNamee}</h1>`;
    
 // Zadanie 1 rozbudowane
-class Person {
+class Personn {
   imie: string;
   nazwisko: string;
   wiek: number;
@@ -18,6 +18,6 @@ class Person {
    return document.body.innerHTML = `<h1>Witaj ${this.imie} ${this.nazwisko} mam ${this.wiek} lat</h1>`;
   }
 }
-let p = new Person("John", "Blake", 11);
+let p = new Personn("John", "Blake", 11);
 
 p.Show();
