@@ -1,0 +1,20 @@
+// $background-color: green;
+// $primary-color: blue;
+// $secondary-color: purple;
+// $border-color: red;
+
+:root {
+    --background-color: whitesmoke;
+    --primary-color: black;
+    --secondary-color: red;
+    --border-color: purple;
+    --button-color: green;
+    --button-background-color:yellow;
+}
+
+[data-theme="dark"] {
+    --background-color: black;
+    --primary-color: whitesmoke;
+    --button-color: yellow;
+    --button-background-color:green;
+}

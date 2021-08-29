@@ -1,0 +1,17 @@
+@import 'variables';
+.menu {
+    li{ 
+        text-transform: uppercase;
+        &:hover {
+             color: var(--secondary-color);
+            //  color:red;
+        }
+    }
+        display:column;
+        //  @include defaultBox($border-color, 5px);
+         @include defaultBox(yellow, 5px);
+}
+
+.menu2 {
+    @include defaultBox(purple, 10px);
+}

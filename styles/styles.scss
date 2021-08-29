@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'mixins';
+@import 'main';
+@import 'menu';
+@import 'game';
+
+// $body-color: green;
+
+body {
+    // background-color: $background-color;
+    // color: $primary-color;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+.switcher {
+     color:  var(--button-color);
+     background-color: var(--button-background-color);
+     border-radius: 12px;
+   outline: none;
+   width: 50%;
+}
+
+// @if data-theme {
+//     .switcher {
+//         color: red;
+//         background-color: white;
+//       }
+// }
+

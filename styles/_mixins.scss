@@ -1,0 +1,5 @@
+@mixin defaultBox($color, $size) {
+    border: $size solid $color;
+    padding: 10px;
+    margin: 15px;
+}
