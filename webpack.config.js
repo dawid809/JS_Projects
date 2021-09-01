@@ -194,4 +194,5 @@ const config7 = {
     filename: 'bundle.js'
   }
 };
+
 module.exports = [configMain, config1, config2, config6, config7];
