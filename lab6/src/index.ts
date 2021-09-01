@@ -28,7 +28,7 @@ function forAdmin(target: object, propKey: string, descriptor: PropertyDescripto
     const method = descriptor.value;
     descriptor.value = function(param) {
         if (param.role === Role.Admin) {
-            console.log('For admin', param);
+            console.log('For admin', param.role);
             return method.call(this, param);
         } else {
             return null;
