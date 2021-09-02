@@ -1,0 +1,67 @@
+###
+GET http://localhost:3000/products HTTP/1.1
+
+###
+POST http://localhost:3000/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Telewizor",
+    "description": "Telewizor plazmowy",
+    "price": 5000,
+    "category": "6130d2d91c39c961c4a56f2f"
+}
+
+
+###
+POST http://localhost:3000/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Pralka",
+    "description": "Pralka automatyczna wolnostojaca",
+    "price": 2000,
+    "category": "6130d2db1c39c961c4a56f31"
+}
+
+
+
+###
+PUT http://localhost:3000/products HTTP/1.1
+content-type: application/json
+
+{
+    "id": "60ae9ecd08037f08c4b74c0e",
+    "name": "Kamera 5",
+    "description": "Telewizor plazmowy",
+    "price": 15000
+}
+
+###
+DELETE http://localhost:3000/products HTTP/1.1
+content-type: application/json
+
+{
+    "id": "60ae9ecd08037f08c4b74c0e",
+}
+
+
+
+###
+GET http://localhost:3000/categories HTTP/1.1
+
+###
+POST http://localhost:3000/categories HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Sprzęt RTV"
+}
+
+###
+POST http://localhost:3000/categories HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Sprzęt AGD"
+}
