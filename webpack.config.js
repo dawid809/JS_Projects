@@ -117,6 +117,45 @@ const config2 = {
   }
 };
 
+const config3 = {
+  entry: './tictactoe/src/tictactoe.ts',
+  mode: 'development',
+  module: {
+    rules: [
+      // all files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'
+      {
+        test: /\.tsx?$/,
+        use: ["ts-loader"],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          {
+            loader: "style-loader"
+            // options: {
+            //   // injectType: "singletonStyleTag"
+            //   // injectType: "linkTag"
+            // }
+          },
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader"
+        ]
+      }
+    ]
+  },
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js' ],
+  },
+  output: {
+    path: path.resolve(__dirname, 'tictactoe/dist'),
+    filename: 'bundle.js'
+  }
+};
+
 const config6 = {
   entry: './lab6/src/index.ts',
   mode: 'development',
@@ -195,4 +234,4 @@ const config7 = {
   }
 };
 
-module.exports = [configMain, config1, config2, config6, config7];
+module.exports = [configMain, config1, config2, config3, config6, config7];
