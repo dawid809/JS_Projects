@@ -1,21 +1,22 @@
 import Board from "./board";
 import GameLogic from "./gameLogic";
 import GameView from "./gameView";
-import { Game } from "../../game.model";
-
 export class TicTacToe {
   board: Board;
+  app: TicTacToe;
   constructor() {
     this.board = new Board();
     this.board.CreateBoard();
   }
 }
 
+let appStart = new TicTacToe();
+
 let game = new GameLogic();
 let gameView = new GameView();
 
 document.querySelector(".startButton").addEventListener("click", () => {
-  console.log("new game startButton");
+  console.log("Restart game button clicked!");
   restartGame();
 });
 

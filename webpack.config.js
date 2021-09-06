@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const configMain = {
-  entry: './src/index.ts',
+  entry: './Lab4and5/src/index.ts',
   mode: 'development',
   module: {
     rules: [
@@ -34,7 +34,7 @@ const configMain = {
     extensions: [ '.tsx', '.ts', '.js' ],
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'lab4and5/dist'),
     filename: 'bundle.js'
   }
 };
@@ -226,7 +226,7 @@ const config7 = {
     ]
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
+    extensions: [ '.tsx', '.ts', '.js', '.css', '.scss' ],
   },
   output: {
     path: path.resolve(__dirname, 'lab7/dist'),

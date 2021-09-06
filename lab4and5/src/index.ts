@@ -1,7 +1,7 @@
 import { Games } from '../games.enum';
 import { Game } from '../game.model';
 // import { TicTacToe } from '../tictactoe/tictactoe';
-import { TicTacToe } from '../lab3-tictactoe/tictactoe'
+import { TicTacToe } from '../tictactoe/tictactoe'
 import { BattleShips } from '../battleships/batttleships';
 import '../styles/styles.scss';
 import { Console } from 'console';
