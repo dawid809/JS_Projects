@@ -118,7 +118,7 @@ const config2 = {
 };
 
 const config3 = {
-  entry: './tictactoe/src/tictactoe.ts',
+  entry: './lab3-tictactoe/src/tictactoe.ts',
   mode: 'development',
   module: {
     rules: [
@@ -151,7 +151,7 @@ const config3 = {
     extensions: [ '.tsx', '.ts', '.js' ],
   },
   output: {
-    path: path.resolve(__dirname, 'tictactoe/dist'),
+    path: path.resolve(__dirname, 'lab3-tictactoe/dist'),
     filename: 'bundle.js'
   }
 };
