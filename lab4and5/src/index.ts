@@ -15,9 +15,6 @@ class App {
         mainContainer.className = 'main';
         const menuContainer = <HTMLDivElement>(document.createElement('div'));
         menuContainer.className = 'menu';
-        const menu2Container = <HTMLDivElement>(document.createElement('div'));
-        menu2Container.className = 'menu2';
-        menu2Container.innerHTML = "Menu 2!";
         const gameContainer = <HTMLDivElement>(document.createElement('div'));
         gameContainer.className = 'game'
         const list = document.createElement('ul');
@@ -29,7 +26,6 @@ class App {
         // samą grę i po kliknięciu w wybrany element listy wywoływać ją, aby doklejać zawartość do gameContainer.
         // Aby wyświetlić menu należy napisać pętlę, któta przeiteruje po wszystkich wartościach enum'a
 
-//  for(let game in Games)
     // 4 iteracja po wszystkich enumach
     for (const games in Games) {
         if (isNaN(Number(games)))
@@ -42,7 +38,6 @@ class App {
         // list.innerHTML += (`<h1>${game.name}</h1>`)
         item.addEventListener('click', (event) => {
             console.log(event.target);
-            console.log('klik');
             gameContainer.innerHTML = "";
             gameContainer.appendChild(game.getGameElement());
         })
@@ -53,7 +48,6 @@ class App {
     menuContainer.appendChild(list);
     document.body.appendChild(mainContainer);
     document.body.appendChild(menuContainer);
-    document.body.appendChild(menu2Container);
     document.body.appendChild(gameContainer);
 
         const switcher = <HTMLButtonElement>(document.createElement('button'));
@@ -67,13 +61,6 @@ class App {
                 document.body.setAttribute('data-theme', 'dark')
             }
         })
-        // menuContainer.appendChild(menuHeader);
-        // menuContainer.appendChild(list);
-        // document.body.appendChild(mainContainer);
-        // document.body.appendChild(menuContainer);
-        // document.body.appendChild(menu2Container);
-        // document.body.appendChild(gameContainer);
-
         menuContainer.appendChild(switcher);
     }
 }
