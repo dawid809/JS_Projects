@@ -1,5 +1,5 @@
 import {Game} from '../game.model';
-import GameView from "./gamieView";
+import GameView from "./gameView";
 import GameLogic from "./gameLogic";
 export class TicTacToe implements Game {
     name: string;

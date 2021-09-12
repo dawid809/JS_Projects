@@ -52,7 +52,7 @@ class App {
 
         const switcher = <HTMLButtonElement>(document.createElement('button'));
         switcher.className = 'switcher';
-        switcher.textContent = "Switch theme";
+        switcher.textContent = "Switch";
         switcher.addEventListener('click', () => {
         console.log('change color!')
             if (document.body.hasAttribute('data-theme')) {

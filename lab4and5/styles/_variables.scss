@@ -4,17 +4,30 @@
 // $border-color: red;
 
 :root {
-    --background-color: whitesmoke;
-    --primary-color: black;
+    --background-color: #F0F0F0;
+    --primary-color: #0d1118;
+    --primary-color-hover: red;
     --secondary-color: red;
-    --border-color: purple;
-    --button-color: green;
-    --button-background-color:yellow;
+    --border-color: #0d1118;
+    --button-color: #F0F0F0;
+    --button-background-color:#0d1118;
+    --button-color-hover:white;
+    --button-background-color-hover: #2b323d;
+    --tile-border:#9a9a9a;
+    --tile-hover:rgb(231, 229, 229);
 }
 
 [data-theme="dark"] {
-    --background-color: black;
-    --primary-color: whitesmoke;
-    --button-color: yellow;
-    --button-background-color:green;
+    --background-color: #0d1118;
+    --primary-color: #F0F0F0;
+    --primary-color-hover: blue;
+    --secondary-color: red;
+    --border-color: #c9d1d8;
+    --button-color: #0d1118;
+    --button-background-color:#F0F0F0;
+    --button-color-hover:#2b323d;
+    --button-background-color-hover:white;
+    --tile-border:#5c6470;
+    --tile-hover:#1d2738;
 }
+//c9d1d8

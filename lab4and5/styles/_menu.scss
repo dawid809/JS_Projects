@@ -1,17 +1,26 @@
-@import 'variables';
-.menu {
-    li{ 
-        text-transform: uppercase;
-        &:hover {
-             color: var(--secondary-color);
-            //  color:red;
-        }
-    }
-        display:column;
-        //  @include defaultBox($border-color, 5px);
-         @include defaultBox(yellow, 5px);
-}
+@import "variables";
 
-.menu2 {
-    @include defaultBox(purple, 10px);
+.menu {
+  width: 80%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  li {
+    text-transform: uppercase;
+    font-size: 28px;
+
+    &:hover {
+      color: var(--primary-color-hover);
+      cursor: pointer;
+    }
+  }
+
+  display: column;
+  @include defaultBox(var(--border-color), 2px);
 }
