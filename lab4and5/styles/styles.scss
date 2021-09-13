@@ -14,19 +14,31 @@ body {
   color: var(--primary-color);
 }
 
-.switcher {
+.switch-wrapper {
+  display: flex;
   position: absolute;
-  text-transform: uppercase;
-  font-size: 18px;
   top: 10px;
   right: 10px;
+}
+
+.switcher {
+  position: relative;
+  display: flex;
+  width: 60px;
+  height: 60px;
   color: var(--button-color);
   background-color: var(--button-background-color);
-  border-radius: 12px;
+  border-radius: 50%;
   outline: none;
-  padding: 10px 15px;
-  font-weight: bold;
   border: none;
+  img {
+    display: flex;
+    align-self: center;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+  }
+
   &:hover {
     background-color: var(--button-background-color-hover);
     color: var(--button-color-hover);

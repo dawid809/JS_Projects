@@ -1,15 +1,19 @@
 import {Game} from '../game.model';
 import GameView from "./gameView";
 import GameLogic from "./gameLogic";
+import logCallGameStart from '../decorators/log';
+
 export class TicTacToe implements Game {
     name: string;
     tictactoe: TicTacToe;
     gameView: GameView;
     gameLogic: GameLogic;
+    available: boolean;
     constructor() {
         this.name = "Kółko i krzyżyk"
     }
 
+    @logCallGameStart
     getGameElement(): HTMLElement {
      const mainDiv = document.createElement('div');
      // Game Wrapper
@@ -65,7 +69,7 @@ export class TicTacToe implements Game {
        const tile = <HTMLDivElement>document.createElement("div");
        tile.className = "tile";
        tile.tabIndex = i;
-       console.log(i, "index");
+      //  console.log(i, "index");
        board.appendChild(tile);
      }
 
@@ -83,7 +87,7 @@ export class TicTacToe implements Game {
       ) as any as Array<HTMLDivElement>;
       tiles.forEach((tile: any) => {
         tile.addEventListener("click", () => {
-       console.log(tile.tabIndex)
+       console.log(`Tile clicked: ${tile.tabIndex}`)
        this.onTileClick(tile.tabIndex);
         });
       });

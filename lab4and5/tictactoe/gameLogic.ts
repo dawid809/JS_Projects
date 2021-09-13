@@ -65,5 +65,9 @@ export default class GameLogic {
         return false;
       }
     }
+
+    saveToSS() {
+      console.log('hhhj');
+    }
   }
   

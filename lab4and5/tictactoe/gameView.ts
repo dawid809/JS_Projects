@@ -20,7 +20,7 @@ export default class GameView {
       if (winCombination && winCombination.includes(i)) {
         tile.classList.add("tileWinner");
         let winSign = document.querySelector(".winner");
-        winSign.innerHTML = `The winner is player ${game.turn} !`;
+        winSign.innerHTML = `The winner is player ${game.turn}!`;
       }
     }
   }

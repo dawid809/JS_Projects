@@ -1,10 +1,9 @@
 import { Games } from '../games.enum';
 import { Game } from '../game.model';
-// import { TicTacToe } from '../tictactoe/tictactoe';
 import { TicTacToe } from '../tictactoe/tictactoe'
 import { BattleShips } from '../battleships/batttleships';
+import Switch from '../switch'
 import '../styles/styles.scss';
-import { Console } from 'console';
 class App {
     constructor() {
         this.init();
@@ -37,12 +36,12 @@ class App {
         item.appendChild(document.createTextNode(game.name));
         // list.innerHTML += (`<h1>${game.name}</h1>`)
         item.addEventListener('click', (event) => {
-            console.log(event.target);
+            // console.log(event.target);
             gameContainer.innerHTML = "";
             gameContainer.appendChild(game.getGameElement());
         })
         list.appendChild(item);
-      console.log(game);
+    //   console.log(game);
     }
     menuContainer.appendChild(menuHeader);
     menuContainer.appendChild(list);
@@ -50,18 +49,7 @@ class App {
     document.body.appendChild(menuContainer);
     document.body.appendChild(gameContainer);
 
-        const switcher = <HTMLButtonElement>(document.createElement('button'));
-        switcher.className = 'switcher';
-        switcher.textContent = "Switch";
-        switcher.addEventListener('click', () => {
-        console.log('change color!')
-            if (document.body.hasAttribute('data-theme')) {
-                document.body.removeAttribute('data-theme');
-            } else {
-                document.body.setAttribute('data-theme', 'dark')
-            }
-        })
-        menuContainer.appendChild(switcher);
+       new Switch();
     }
 }
 
