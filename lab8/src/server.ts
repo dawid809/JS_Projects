@@ -1,8 +1,8 @@
 import * as http from 'http'
 import * as websocket from 'ws'
+// import '../styles/style.scss'
 
 const server = http.createServer();
-
 const socket = new websocket.Server({server});
 socket.on('connection', function connection(ws) {
     ws.on('message', function incoming(message) {
@@ -10,7 +10,7 @@ socket.on('connection', function connection(ws) {
       console.log('received: %s', message);
     });
   
-    ws.send('connected');
+    ws.send('New user connected!');
   });
 
 function broadcast(data: string): void {
@@ -19,4 +19,4 @@ function broadcast(data: string): void {
     });	
 };
 
-server.listen(8080);
+server.listen(8080, () => console.log('Listening on port 8080...!'));
