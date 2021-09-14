@@ -1,6 +1,12 @@
+import GameView from "./gameView";
+import {TicTacToe} from './tictactoe'
 export default class GameLogic {
     turn: string;
     board;
+    tictactoe: TicTacToe;
+    gameView: GameView;
+    ssKey: string = 'tictactoe';
+    lsKey: string = 'tictactoe';
     constructor() {
       this.turn = "X";
       // this.board = new Array(9).fill(null);
@@ -16,6 +22,8 @@ export default class GameLogic {
     }
   
     makeMove(i: any) {
+      this.saveToSessionStorage();
+
       if (this.endOfGame()) {
         return;
       }
@@ -66,8 +74,12 @@ export default class GameLogic {
       }
     }
 
-    saveToSS() {
-      console.log('hhhj');
+    saveToSessionStorage() {
+     sessionStorage.setItem(this.ssKey, JSON.stringify(this.board));
     }
+
+     saveToLocalStorage() {
+       localStorage.setItem(this.lsKey, JSON.stringify(this.board));
+     }
   }
   

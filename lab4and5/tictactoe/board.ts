@@ -1,5 +1,8 @@
 export default class Board {
     CreateBoard() {
+
+      const mainDiv = document.querySelector('.main-div');
+     
       // Game Wrapper
       const wrapper = <HTMLDivElement>document.createElement("div");
       wrapper.className = "wrapper";
@@ -40,14 +43,34 @@ export default class Board {
       gameHeader.appendChild(playerO);
       playerO.appendChild(spanO);
   
-      // Board and winner
+      // Board and winner and back move
       const board = <HTMLDivElement>document.createElement("div");
       board.className = "board";
+      const line = <HTMLDivElement>document.createElement("div");
+      line.className = 'line';
       const winner = <HTMLDivElement>document.createElement("div");
       winner.className = "winner";
-  
+      const backMove = <HTMLButtonElement>document.createElement("button");
+      backMove.className = 'back-move';
+      backMove.textContent = "Move";
+
+      // Save and load button
+      const buttonsWrapper = <HTMLDivElement>document.createElement("div");
+      buttonsWrapper.className = "buttons-wrapper";
+      const saveButton = <HTMLButtonElement>document.createElement("button");
+      saveButton.className = 'save-button'
+      saveButton.textContent = 'Save'
+      const loadButton = <HTMLButtonElement>document.createElement("button");
+      loadButton.className = 'load-button';
+      loadButton.textContent = 'Load'
+
       gameWrapper.appendChild(board);
+      gameWrapper.appendChild(line);
+      gameWrapper.appendChild(backMove)
       gameWrapper.appendChild(winner);
+      buttonsWrapper.appendChild(saveButton);
+      buttonsWrapper.appendChild(loadButton)
+      gameWrapper.appendChild(buttonsWrapper)
   
       for (let i = 0; i < 9; i++) {
         const tile = <HTMLDivElement>document.createElement("div");

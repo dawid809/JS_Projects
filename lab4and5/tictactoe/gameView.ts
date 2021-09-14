@@ -4,7 +4,8 @@ export default class GameView {
   constructor() {}
 
   updateBoard(game: GameLogic): void {
-    this.updateTurn(game);
+      this.updateTurn(game);
+  
     const winCombination = game.findWinCondition();
     for (let i = 0; i < game.board.length; i++) {
       const tile = document.querySelector(`.tile[tabindex="${i}"]`);

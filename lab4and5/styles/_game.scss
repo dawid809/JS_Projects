@@ -12,12 +12,13 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px;
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
 }
 
 .header {
@@ -71,7 +72,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 500px;
-  height: 500px;
+  min-height: 500px;
 }
 
 .gameHeader {
@@ -146,11 +147,68 @@ body {
   color: #588c7e;
 }
 
+.line {
+  border-bottom: 5px solid lightgray;
+}
+
+.back-move {
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 24px;
+  width: 180px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: var(--button-color);
+  background-color: var(--button-background-color);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    color: var(--button-color-hover);
+    background-color: var(--button-background-color-hover);
+  }
+
+  &:before {
+    content: "<- ";
+    font-size: 36px;
+    font-weight: bold;
+  }
+}
+
 .winner {
   font-size: 44px;
-  width: 110%;
-  align-self: center;
+  text-align: center;
   color: #588c7e;
-  padding-bottom: 20px;
   margin-top: 20px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid var(--border-color);
+  padding: 15px;
+
+  button{
+    padding: 10px;
+    border-radius: 24px;
+    width: 180px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--button-color);
+    background-color: var(--button-background-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  button:hover{
+    color: var(--button-color-hover);
+    background-color: var(--button-background-color-hover);
+  }
+ 
 }
