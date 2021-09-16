@@ -3,7 +3,8 @@ import GameView from "./gameView";
 import GameLogic from "./gameLogic";
 import logCallGameStart from "../decorators/log";
 import confirmable from "../decorators/confirmable";
-
+import {isDisable} from "../decorators/disable";
+@isDisable(false)
 export class TicTacToe implements Game {
   name: string;
   tictactoe: TicTacToe;

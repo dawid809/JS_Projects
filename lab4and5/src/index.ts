@@ -31,6 +31,9 @@ class App {
         continue;
       
         const game = gameFactory.getGame(Number(games));
+
+        if(game.available === false)
+        continue;
         // let p = document.createElement('p');
         const item = document.createElement('li');
         item.appendChild(document.createTextNode(game.name));

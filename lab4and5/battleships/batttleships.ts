@@ -1,10 +1,9 @@
 import {Game} from '../game.model';
 import logCallGameStart from '../decorators/log'
 import countGameStart from '../decorators/count';
-import {disable} from '../decorators/disable';
+import {isDisable} from '../decorators/disable';
 
-// @isDisabled(true)
-@disable
+@isDisable(true)
 export class BattleShips implements Game {
     name: string;
     count: number = 0;
